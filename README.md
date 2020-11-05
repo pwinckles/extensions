@@ -54,10 +54,10 @@ Because OCFL clients are not required to implement any or all extensions, it is 
 
 In order to help address some of the [undefined behaviors](#undefined-behavior) as well as to provide a specified approach for allowing an OCFL client to answer questions such as:
   - Is an extension deactivated, only applying to earlier versions of the object?
-  - Should the active extensions be loaded in a specific order?
+  - Should extensions be loaded in a specific order?
   - Does one extension depend on another?
 
-..an optional extension initializer may be employed.
+..an optional extension initializer may be employed. There is no formal definition of how a client should initialize extensions. Instead, initialization behavior may be definied using OCFL extensions.
 
 The only difference between an initializer extension and any other extension is that its *extension directory* MAY be named `init`.
 If an OCFL client encounters an *extension directory* named `init`, the client SHOULD load that extension first.
